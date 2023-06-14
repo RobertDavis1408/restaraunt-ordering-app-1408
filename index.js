@@ -208,7 +208,7 @@ function handlePayBtnClick(){
     document.getElementById(`order-section-el`).classList.add('hidden');
     document.getElementById(`thank-you-modal-el`).classList.toggle('hidden');
     firstNameArray =[]
-    window.scroll(0,600);
+    window.scroll(0,800);
 }
 
 function getFeedHtml(){
