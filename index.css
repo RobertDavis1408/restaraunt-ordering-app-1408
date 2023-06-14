@@ -344,6 +344,8 @@ img {
     line-height: 31px;
     letter-spacing: 0em;
     transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
 }
 
  .thank-you-modal {
