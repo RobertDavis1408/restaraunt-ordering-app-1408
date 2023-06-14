@@ -371,6 +371,7 @@ input {
     padding: 26.53px;
     color: #757575;
     font-family: 'Josefin Sans', sans-serif;
+    font-style: normal;
 }
 
 input::-webkit-outer-spin-button,
