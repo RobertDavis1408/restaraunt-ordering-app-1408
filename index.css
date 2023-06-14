@@ -370,6 +370,7 @@ input {
     margin: 0 auto 23.22px auto;
     padding: 26.53px;
     color: #757575;
+    font-family: 'Smythe', cursive;
 }
 
 input::-webkit-outer-spin-button,
