@@ -13,12 +13,13 @@ document.addEventListener('click', function(e){
     if(e.target.dataset.menuItem){
         handleAddItemClick(e.target.dataset.menuItem)
         handleSpeedClick(e.target.dataset.menuItem)
+         handleOrderSectionEl()
     } else if(e.target.id === 'order-btn'){
         handleCompleteOrderBtn()
         
     } else if(e.target.dataset.removeItem){
         handleRemoveItemClick(e.target.dataset.removeItem)
-        
+        handleOrderSectionEl()
     } else if(e.target.id === 'pay-btn-el') {
         handlePayBtnClick()
         
@@ -34,9 +35,16 @@ function handleSpeedClick(e){
     render()
 }
 
+function handleOrderSectionEl(){
+    
+   document.getElementById(`order-section-el`).classList.toggle('hidden2');
+} 
+
+
 
 function handleAddItemClick(menuId){
-    const order = menuArray.find((order) => order.id === menuId); 
+    const order = menuArray.find((order) => order.id === menuId);
+    
     if(orderArray.length == 0){
         orderArray.push({
             name: order.name,
@@ -83,6 +91,7 @@ function handleAddItemClick(menuId){
     } //<--- end of if(orderArray.length) statement ---
      
     render()
+     
     calculateDiscount()
 }   
     
@@ -154,10 +163,13 @@ if(targetOrderObj.quantity > 1){
     orderTotal -= targetOrderObj.price 
 } else{
     orderTotal -= targetOrderObj.price * targetOrderObj.quantity; 
-
+    
     orderArray.splice(orderArray.findIndex(e => e.id === menuId),1);}
     calculateDiscount()
     render()
+    if(orderArray.length < 1){
+     handleOrderSectionEl()
+    }
 }
 
 function handleCompleteOrderBtn(){
@@ -295,7 +307,7 @@ function getFeedHtml(){
                      ${nameForFeedHtml}
                      ${userRatingHtml}
                 </div>
-                <div class="order-section-el" id="order-section-el">
+                <div class="order-section-el hidden2" id="order-section-el">
                     <div class="order-header-el" >
                         <h3 class="order-header">Your order</h3>
                         <h4 class="order-deal" id="order-header-el">( add a beer to any food item for discount )</h4>

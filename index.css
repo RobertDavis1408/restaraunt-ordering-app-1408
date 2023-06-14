@@ -342,9 +342,6 @@ img {
     font-weight: 700;
     line-height: 31px;
     letter-spacing: 0em;
-    
-
-    
 }
 
  .thank-you-modal {
@@ -376,7 +373,6 @@ input {
     margin: 0 auto 23.22px auto;
     padding: 26.53px;
     color: #757575;
-    font-style: normal;
     font-family: Verdana;
     font-size: 20px;
     font-weight: 400;
@@ -485,4 +481,6 @@ button:focus {
   color:#fc0;
 }
 
-    
+.hidden2 {
+    display: none;
+}    
