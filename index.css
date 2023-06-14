@@ -333,7 +333,7 @@ img {
     position: absolute;
     width: 524px;
     height: 580.24px;
-    /* margin: auto auto; */
+     margin: auto auto; 
     filter: drop-shadow(5.18654px 5.18654px 255.437px rgba(0, 0, 0, 0.5)); 
     background-color: #FFFFFF;
     text-align: center;
