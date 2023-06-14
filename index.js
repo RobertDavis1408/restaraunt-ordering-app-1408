@@ -175,7 +175,7 @@ if(targetOrderObj.quantity > 1){
 function handleCompleteOrderBtn(){
     if(orderArray.length > 0){
         document.getElementById(`payment-modal`).classList.toggle('hidden')
-        document.getElementById(`order-header-el`).classList.add('hidden');
+        document.getElementById(`order-section-el`).classList.add('hidden');
     } else {
         return
     }

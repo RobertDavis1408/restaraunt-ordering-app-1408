@@ -330,10 +330,10 @@ img {
 .payment-modal {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     width: 524px;
     height: 580.24px;
-     margin: auto auto; 
+     margin: 0 auto; 
     filter: drop-shadow(5.18654px 5.18654px 255.437px rgba(0, 0, 0, 0.5)); 
     background-color: #FFFFFF;
     text-align: center;
@@ -343,9 +343,9 @@ img {
     font-weight: 700;
     line-height: 31px;
     letter-spacing: 0em;
-    transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
+     transform: translate(-50%, -50%);
 }
 
  .thank-you-modal {
